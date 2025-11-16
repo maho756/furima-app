@@ -1,0 +1,7 @@
+{
+    "require": {
+        "doctrine/dbal": "^4.3",
+        "laravel/framework": "^12.38",
+        "laravel/fortify": "^1.31"
+    }
+}

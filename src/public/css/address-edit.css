@@ -1,0 +1,96 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* 全体中央寄せ */
+.form__content {
+    width: 100%;
+    max-width: 680px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* 見出し（ログイン） */
+.form__heading h2 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* グループ全体 */
+.form__group {
+    margin-bottom: 20px;
+}
+
+/* ラベル */
+.form__group-title {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+/* 入力欄 */
+.form__input--text input {
+    width: 100%;
+    height: 59px;
+    padding: 10px 14px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* エラー表示 */
+.form__error {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ボタン全体 */
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ログインボタン */
+.form__button-submit {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 0;
+    background: #FF5555;
+    color: #fff;
+    font-size: 26px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form__button-submit:hover {
+    background-color: #ff4f4f;
+}
+
+/* 登録リンク */
+.register__link {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.register__button-submit {
+    font-size: 20px;
+    color: #0073CC;
+    text-decoration: none;
+}
+
+.register__button-submit:hover {
+    text-decoration: underline;
+}

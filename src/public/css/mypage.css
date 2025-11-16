@@ -1,0 +1,186 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+
+/* 全体ラッパー */
+.mypage__content {
+    /* width: 100%; */
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー部分（アイコン・名前・編集ボタン） */
+.mypage__header {
+    display: flex;
+    align-items: center;
+    padding: 50px 100px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* プロフィールアイコン */
+.mypage__icon img.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #D9D9D9;
+}
+
+/* ユーザー名 */
+.mypage__name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* 編集ボタン */
+.mypage__edit-btn {
+    margin-left: auto;
+    padding: 10px 20px;
+    border: 2px solid #FF5555;
+    color: #FF5555;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.mypage__edit-btn:hover {
+    background-color: #ff5e5e;
+    color: #fff;
+}
+
+/* タブ切り替え */
+.mypage__tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.mypage__tab {
+    margin-left: 70px;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #5F5F5F;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.mypage__tab:hover {
+    color: #000;
+    border-bottom: 2px solid #aaa;
+}
+
+/* アクティブタブ */
+.mypage__tab--active {
+    color: red;
+}
+
+
+/* 商品グリッド */
+.mypage__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 70px;
+}
+
+
+/* 商品カード */
+.item-card {
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 商品画像 */
+.item-card__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+}
+
+
+.item-card__image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.item-card__sold-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    /* SOLD画像のサイズを調整 */
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* 商品名 */
+.item-card__name {
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 850px) {
+    .mypage__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .mypage__icon img.profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mypage__edit-btn {
+        margin-left: 0;
+        padding: 8px 16px;
+    }
+
+    .mypage__tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mypage__tabs a {
+        padding: 10px 20px;
+    }
+
+    .mypage__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .mypage__icon img.profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .mypage__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

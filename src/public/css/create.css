@@ -1,0 +1,169 @@
+/* フォーム全体ラッパー */
+.item-form__heading {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 見出し */
+.item-form__heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+/* サブセクション見出し */
+.item-form__subheading {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px 0;
+    color: #5F5F5F;
+    border-bottom: 1px solid #5F5F5F;
+}
+
+/* 入力グループ */
+.item-form__group {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ラベル */
+.item-form__label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* インプット・セレクト・テキストエリア */
+.item-form__input,
+.item-form__select,
+.item-form__textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000000;
+}
+
+/* テキストエリアのリサイズ許可 */
+.item-form__textarea {
+    resize: vertical;
+}
+
+/* エラー表示 */
+.error-message {
+    color: #ff5e5e;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ✅ カテゴリ一覧ラッパー */
+.item-form__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ✅ カテゴリタグ全体（ラベル） */
+.item-form__category-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #FF5655;
+    border-radius: 20px;
+    color: #FF5655;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+/* ホバー時 */
+.item-form__category-tag:hover {
+    background-color: #FF5655;
+    color: white;
+}
+
+/* ✅ inputは完全非表示 */
+.item-form__category-tag input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ✅ 選択されたときのスタイル（input + span構造を想定） */
+/* input と label が兄弟関係にある構造対応 */
+.item-form__category-checkbox:checked+.item-form__category-tag {
+    background-color: #FF5655;
+    color: white;
+    border-color: #FF5655;
+}
+
+/* span には重なり順のための z-index */
+.item-form__category-tag span {
+    position: relative;
+    z-index: 1;
+}
+
+/* ✅ ファイルアップロード用 外枠（点線ボックス） */
+.item-form__file-wrapper {
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* ✅ ラベルをボタン風に */
+.item-form__file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #FF5655;
+    border-radius: 20px;
+    color: #FF5655;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.item-form__file-label:hover {
+    background-color: #FF5655;
+    color: white;
+}
+
+/* ✅ input[type="file"] は非表示 */
+.item-form__file-input {
+    display: none;
+}
+
+/* 出品ボタン */
+.item-form__submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.item-form__button {
+    padding: 12px 30px;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.item-form__button:hover {
+    background-color: #e74c3c;
+}

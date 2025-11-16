@@ -1,0 +1,96 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+/* 全体ラッパー */
+.item-list__content {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* タブナビゲーション */
+.item-list__tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.item-list__tab {
+    margin-left: 70px;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #5F5F5F;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.item-list__tab:hover {
+    color: #000;
+    border-bottom: 2px solid #aaa;
+}
+
+.item-list__tab--active {
+    color: red;
+}
+
+/* 商品一覧（グリッド） */
+.item-list__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 70px;
+}
+
+/* 商品カード */
+.item-card {
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 商品画像 */
+.item-card__image{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+}
+
+
+.item-card__image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.item-card__sold-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    /* SOLD画像のサイズを調整 */
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* 商品名 */
+.item-card__name {
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
